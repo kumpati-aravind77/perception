@@ -1,0 +1,108 @@
+// --------------------------------------------------------------------------------------
+//
+// PDK Configuration sample file to be adapted by customer
+//
+// --------------------------------------------------------------------------------------
+{
+   "radar_sensors": [
+
+        {
+            "name": "srr_front_left",
+            "type": "srr520di",
+            "id": 0,
+            "can_channel": "can0",
+            "mounting_parameters": {
+                "xyz": [2.8, 0.8, 0.43],
+                "yaw": 1.55,
+                "x_cog": 2.8,
+                "orientation": "PLUG_UP"
+            }
+        },
+    {
+            "name": "srr_front_left",
+            "type": "srr520di",
+            "id": 1,
+            "can_channel": "can1",
+            "mounting_parameters": {
+                "xyz": [2.8, -0.8, 0.43],
+                "yaw": -1.55,
+                "x_cog": -2.8,
+                "orientation": "PLUG_UP"
+            }
+        },
+    {   "name": "srr_front_left",
+            "type": "srr520di",
+            "id": 2,
+            "can_channel": "can2",
+            "mounting_parameters": {
+                "xyz": [0.8, 0.8, 1.2],
+                "yaw": 1.37,
+                "x_cog": 2.8,
+                "orientation": "PLUG_DOWN"
+            }
+        },
+        {
+            "name": "ars_1",
+            "type": "ars430di",
+            "id": 20,
+            "mounting_parameters": {
+                "xyz": [1, 0, 0.5],
+                "pitch": 0,
+                "yaw": 0,
+                "orientation": "PLUG_RIGHT"
+            }
+        },
+        {
+            "name": "ars_2",
+            "type": "ars430di",
+            "id": 21,
+            "mounting_parameters": {
+                "xyz": [-0.60, 0, -0.65],
+                "pitch": 0,
+                "yaw": 3.14,
+                "orientation": "PLUG_LEFT"
+            }
+        },
+        {
+            "name": "ars_3",
+            "type": "ars430di",
+            "id": 25,
+            "mounting_parameters": {
+                "xyz": [3.3, 0, 0.53],
+                "pitch": 0,
+                "yaw": 0,
+                "orientation": "PLUG_LEFT"
+            }
+        },
+        {
+            "name": "ars_4",
+            "type": "ars430di",
+            "id": 23,
+            "mounting_parameters": {
+                "xyz": [1, 0, 0.62],
+                "pitch": 0,
+                "yaw": 0,
+                "orientation": "PLUG_LEFT"
+            }
+        }
+    ],
+    "camera_sensors": [
+        {
+            "name": "bcam_front",
+            "type": "bcam",
+            "id": 0,
+            "stream_id": "192.168.100.1:5000",
+            "topic_name_id": "svc_front"
+        },
+        {
+            "name": "bcam_rear",
+            "type": "bcam",
+            "id": 1,
+            "stream_id": "192.168.100.1:5001",
+            "topic_name_id": "svc_rear"
+        }
+    ],
+    "localization": {
+        "map_directory": "/path/to/map"
+    }
+}
